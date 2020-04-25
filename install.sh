@@ -1,16 +1,10 @@
-#!/bin/bash
+#!/bin/sh
 
-# ****************************************************** #
-#                                                        #
-#                   Ronualdo - PU4RON                    #
-#                                                        #
-# ****************************************************** #
 
-echo ""
-echo ""
+echo " "
 echo "* Iniciando, aguarde...!"
-echo ""
-echo ""
+echo " "
+echo " "
 
 sleep 2
 
@@ -21,6 +15,7 @@ orig="/usr/local/bin/"
 dest="/usr/local/bin/DMRGateway"
 
 font="https://github.com/g4klx/DMRGateway.git"
+
 
 sudo dmrgateway.service stop
 
@@ -57,9 +52,11 @@ sudo dmrgateway.service start
 
 sudo mmdvmhost.service restart
 
-
-echo ""
 echo ""
 echo "* FIM!"
 echo ""
 echo ""
+
+# ****************************************************** #
+#                    Ronualdo - PU4RON                   #
+# ****************************************************** #
