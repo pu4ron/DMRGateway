@@ -23,7 +23,7 @@ sudo dmrgateway.service stop
 
 
 
-home="/tmp/temp"
+home="/home/pi-star/temp"
 
 orig="/usr/local/bin/"
 
@@ -46,7 +46,6 @@ sudo mkdir "$home"
 
 cd "$home"
 
-
 sudo cp "$dest"  "$dest"-$(daystamp)_$(timestamp)
 
 sudo rm "$dest"  
@@ -63,8 +62,6 @@ sudo rm -R "$home"
 
 
 sudo mount -o remount,ro /
-
-
 
 sudo dmrgateway.service start
 
