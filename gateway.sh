@@ -42,22 +42,9 @@ timestamp(){
         date +"%T"
 }
 
+if [ -e "$gw" ]; then sudo rm -R "$gw"; fi
 
-
-if [ -e "$gw" ]
-then
-sudo rm -R "$gw" 
-fi
-
-
-fi
-if [ -e "$home" ]
-then
-sudo rm -R "$home" 
-else
-sudo mkdir "$home"
-fi
-
+if [ -e "$home" ]; then sudo rm -R "$home"; else sudo mkdir "$home"; fi
 
 cd "$home"
 
