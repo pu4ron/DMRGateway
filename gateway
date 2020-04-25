@@ -1,15 +1,5 @@
-#! /bin/bash
-###############################################################################
-#
-# RONUALDO - PU4RON (BRA)
-#                                                 
+#!/bin/bash
 
-echo " "
-echo "* Iniciando, aguarde...!"
-echo " "
-echo " "
-
-sleep 2
 
 home="/tmp/temp"
 
@@ -57,5 +47,3 @@ sudo mmdvmhost.service restart
 
 echo ""
 echo "* FIM!"
-echo ""
-echo ""
