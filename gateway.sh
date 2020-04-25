@@ -27,6 +27,8 @@ home="/home/pi-star/temp"
 
 orig="/usr/local/bin/"
 
+gw="/home/pi-star/DMRGateway"
+
 dest="/usr/local/bin/DMRGateway"
 
 font="https://github.com/g4klx/DMRGateway.git"
@@ -42,7 +44,20 @@ timestamp(){
 
 
 
+if [ -e "$gw" ]
+then
+sudo rm -R "$gw" 
+fi
+
+
+fi
+if [ -e "$home" ]
+then
+sudo rm -R "$home" 
+else
 sudo mkdir "$home"
+fi
+
 
 cd "$home"
 
@@ -58,7 +73,9 @@ sudo make
 
 sudo cp DMRGateway "$orig"
 
-sudo rm -R "$home" 
+sudo rm -R "$home"
+
+sudo rm -R "$gw"
 
 
 sudo mount -o remount,ro /
